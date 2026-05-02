@@ -1,33 +1,26 @@
 import os
-import requests
 from dotenv import load_dotenv
+from services.groq_client import GroqClient
 
 # Load environment variables
 load_dotenv()
 
-API_KEY = os.getenv("GROQ_API_KEY")
+def main():
+    try:
+        client = GroqClient()
 
-url = "https://api.groq.com/openai/v1/chat/completions"
+        prompt = "Explain cross-border data transfer in one paragraph"
 
-headers = {
-    "Authorization": f"Bearer {API_KEY}",
-    "Content-Type": "application/json"
-}
+        print("\n Sending request to Groq...\n")
 
-data = {
-    "model": "llama-3.3-70b-versatile",
-    "messages": [
-        {"role": "user", "content": "Explain cross-border data transfer in one paragraph"}
-    ],
-    "temperature": 0.7
-}
+        response = client.generate_response(prompt)
 
-response = requests.post(url, headers=headers, json=data)
+        print(" AI Response:\n")
+        print(response)
 
-if response.status_code == 200:
-    result = response.json()
-    print("\n✅ AI Response:\n")
-    print(result["choices"][0]["message"]["content"])
-else:
-    print("❌ Error:", response.status_code)
-    print(response.text)
+    except Exception as e:
+        print(" Error:", str(e))
+
+
+if __name__ == "__main__":
+    main()
