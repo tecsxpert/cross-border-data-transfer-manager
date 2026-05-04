@@ -1,0 +1,15 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+ai-service/venv/
+
+# Node / Java (future safety)
+node_modules/
+target/
+
+# Misc
+chroma_data/
