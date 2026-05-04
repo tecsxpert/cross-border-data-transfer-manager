@@ -1,0 +1,14 @@
+ai-service/
+│-- routes/
+│   ├── describe.py
+│   ├── recommend.py
+│   ├── report.py
+│-- services/
+│   ├── groq_client.py
+│-- prompts/
+│   ├── describe.txt
+│   ├── recommend.txt
+│   ├── report.txt
+│-- app.py
+│-- requirements.txt
+│-- Dockerfile
