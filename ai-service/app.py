@@ -60,6 +60,24 @@ def generate():
     return jsonify({"response": response})
 
 
+@app.route("/health", methods=["GET"])
+def health():
+    return {"status": "ok"}
+
+
+@app.route("/", methods=["GET"])
+def home():
+    return {"message": "AI Service Running"}
+
+@app.after_request
+def add_security_headers(response):
+    response.headers["Content-Security-Policy"] = "default-src 'self'"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    return response
+
+
 # -----------------------------
 # Run App
 # -----------------------------
