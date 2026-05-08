@@ -1,0 +1,26 @@
+.env
+*.log
+
+# Java / Maven
+backend/target/
+target/
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local uploads and generated data
+uploads/
+chroma_data/
+
+# OS / IDE noise
+desktop.ini
+.DS_Store

@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: backend
+  datasource:
+    url: ${DB_URL:jdbc:h2:mem:data_transfer;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE}
+    driver-class-name: ${DB_DRIVER:org.h2.Driver}
+    username: ${DB_USER:sa}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: ${HIBERNATE_DDL:create-drop}
+    show-sql: ${SHOW_SQL:true}
+    properties:
+      hibernate:
+        dialect: ${HIBERNATE_DIALECT:org.hibernate.dialect.H2Dialect}
+  flyway:
+    enabled: ${FLYWAY_ENABLED:false}
+  cache:
+    type: ${CACHE_TYPE:simple}
+  h2:
+    console:
+      enabled: ${H2_CONSOLE:true}
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USER}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+jwt:
+  secret: ${JWT_SECRET:mySuperSecureJwtSecretKeyThatIsLongEnoughForHS2561234567890}
+  expiration: 86400000
+
+server:
+  port: ${SERVER_PORT:8080}
