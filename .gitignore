@@ -1,3 +1,4 @@
+main
 .env
 *.log
 
@@ -24,3 +25,20 @@ chroma_data/
 # OS / IDE noise
 desktop.ini
 .DS_Store
+=======
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+ai-service/venv/
+
+# Node / Java (future safety)
+node_modules/
+target/
+
+# Misc
+chroma_data/
+main
