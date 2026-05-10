@@ -1,0 +1,21 @@
+You are an expert in cross-border data transfer regulations and compliance (GDPR, CCPA, PDPA, PIPL, etc.).
+
+A data transfer has been submitted with the following details:
+- Title: {title}
+- Source Country: {source_country}
+- Destination Country: {destination_country}
+- Data Category: {data_category}
+- Transfer Mechanism: {transfer_mechanism}
+
+Analyse this transfer and provide a structured JSON response with the following fields:
+{{
+  "summary": "2-3 sentence plain-English description of this transfer and its compliance context",
+  "compliance_framework": "Primary regulation(s) applicable (e.g. GDPR Article 46, CCPA, etc.)",
+  "risk_level": "One of: LOW, MEDIUM, HIGH, CRITICAL",
+  "compliance_score": <integer 0-100 representing estimated compliance strength>,
+  "key_requirements": ["list", "of", "3-5", "key", "legal", "requirements"],
+  "data_subject_rights": "Brief note on data subject rights applicable in source country",
+  "generated_at": "{generated_at}"
+}}
+
+Be factual, concise, and focus on regulatory accuracy. Return ONLY valid JSON.

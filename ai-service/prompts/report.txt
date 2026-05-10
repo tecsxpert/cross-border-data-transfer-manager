@@ -1,0 +1,37 @@
+You are a senior data protection officer generating a formal compliance report.
+
+Generate a comprehensive compliance report for this cross-border data transfer:
+- Transfer ID: {transfer_id}
+- Title: {title}
+- Source Country: {source_country}
+- Destination Country: {destination_country}
+- Data Category: {data_category}
+- Transfer Mechanism: {transfer_mechanism}
+- Current Status: {status}
+- Compliance Score: {compliance_score}/100
+
+Return a structured JSON report:
+{{
+  "report_title": "Compliance Report: {title}",
+  "executive_summary": "3-4 sentence executive summary of compliance posture",
+  "transfer_overview": {{
+    "regulatory_framework": "Applicable regulations",
+    "transfer_basis": "Legal basis for transfer",
+    "adequacy_status": "Adequacy decision status between countries",
+    "safeguards_in_place": ["list", "of", "safeguards"]
+  }},
+  "risk_assessment": {{
+    "overall_risk": "LOW|MEDIUM|HIGH|CRITICAL",
+    "risk_factors": ["list", "of", "identified", "risks"],
+    "mitigating_factors": ["list", "of", "controls", "in", "place"]
+  }},
+  "compliance_gaps": ["list", "of", "identified", "gaps"],
+  "recommended_actions": [
+    {{"priority": "HIGH", "action": "specific action", "deadline": "timeframe"}}
+  ],
+  "conclusion": "Concluding paragraph with overall compliance verdict",
+  "generated_at": "{generated_at}",
+  "is_fallback": false
+}}
+
+Return ONLY valid JSON. Be thorough and professionally worded.
