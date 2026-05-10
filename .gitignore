@@ -1,15 +1,15 @@
-# Environment
 .env
-
-# Python
-__pycache__/
-*.pyc
-venv/
-ai-service/venv/
-
-# Node / Java (future safety)
-node_modules/
 target/
-
-# Misc
+node_modules/
+__pycache__/
 chroma_data/
+*.class
+*.jar
+*.war
+*.pyc
+.DS_Store
+.idea/
+*.iml
+dist/
+build/
+*.log
