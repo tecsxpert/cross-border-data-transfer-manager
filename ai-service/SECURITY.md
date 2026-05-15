@@ -84,3 +84,56 @@ Implemented 8 pytest unit tests covering:
 Result:
 All 8 tests passed successfully.
 
+
+
+## Day 9 — Week 2 Security Sign-off
+
+### 1. JWT Verification
+Status: Not implemented in AI service
+
+Reason:
+Authentication is expected to be handled by the backend/API gateway layer, not the Flask AI microservice.
+
+---
+
+### 2. Rate Limiting Verification
+Status: Verified
+
+Implementation:
+- Flask-Limiter configured
+- Limit: 30 requests per minute per IP
+
+Result:
+Rate limiting functioning correctly.
+
+---
+
+### 3. Injection Protection Verification
+Status: Verified
+
+Implemented Protections:
+- Prompt injection detection
+- HTML sanitization
+- Invalid input validation
+
+Result:
+All injection-related test cases successfully blocked or sanitized.
+
+---
+
+### 4. PII Audit
+Status: Passed
+
+Findings:
+- No personally identifiable information (PII) stored
+- Prompt templates do not request sensitive user information
+- AI service processes only generic query inputs
+
+Conclusion:
+No PII exposure risks identified in current implementation.
+
+---
+
+### Final Security Status
+All Week 2 AI-service security checks completed successfully.
+
