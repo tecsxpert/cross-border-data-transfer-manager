@@ -70,3 +70,17 @@ http://127.0.0.1:5000
 ### Final Status:
 All critical security checks passed.
 
+
+
+## Day 8 — Unit Testing
+
+Implemented 8 pytest unit tests covering:
+- Endpoint validation
+- Error handling
+- Injection rejection
+- HTML sanitization
+- Mocked Groq API responses
+
+Result:
+All 8 tests passed successfully.
+
