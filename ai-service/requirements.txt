@@ -1,0 +1,6 @@
+flask
+requests
+python-dotenv
+flask-limiter
+pytest
+pytest-mock
