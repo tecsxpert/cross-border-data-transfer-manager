@@ -158,3 +158,21 @@ Prompt Improvements:
 Final Status:
 AI response quality target achieved (>= 4/5 average).
 
+
+
+
+
+## Day 11 — Docker E2E Testing
+
+Performed end-to-end AI-service testing using Docker Compose.
+
+Verified:
+- Flask application running inside Docker container
+- Groq API integration functioning correctly
+- Prompt templates accessible in container
+- /generate endpoint working successfully
+- /health endpoint verified
+
+Result:
+AI microservice validated successfully in containerized environment.
+
